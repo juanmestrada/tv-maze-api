@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>TV Maze</title>
+  <link rel="icon" href="tv-icon.png" />
+  <link href="https://bootswatch.com/5/superhero/bootstrap.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar sticky-top navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="tvm-logo.png">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <form id="searchForm" class="d-flex" role="search">
+          <input id="searchForm-term" type="search" required class="form-control" aria-label="Search" placeholder="Search shows...">
+          <button type="submit" class="input-group-text btn">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+
+    <section id="showsList" class="row row-cols-2 row-cols-md-5 g-1">
+      <!-- will be filled in by JS -->
+      <img class="tv-svg" src="tv.svg">
+    </section>
+  </main>
+
+  <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="showModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://unpkg.com/jquery"></script>
+  <script src="http://unpkg.com/axios/dist/axios.js"></script>
+  <script src="tvmaze.js"></script>
+
+  <!-- we've written in-browser tests for this; uncomment to see them
+
+<link rel="stylesheet"
+      href="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.css" />
+<script
+    src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+<script
+    src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+<script
+    src= "https://unpkg.com/jasmine-core/lib/jasmine-core/boot0.js"></script>
+<script
+    src= "https://unpkg.com/jasmine-core/lib/jasmine-core/boot1.js"></script>
+<script
+    src="https://unpkg.com/axios-mock-adapter/dist/axios-mock-adapter.js"></script>
+<script src="tvmaze.test.js"></script>
+
+-->
+
+</body>
+
+</html>

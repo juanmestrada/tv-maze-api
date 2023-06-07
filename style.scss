@@ -1,0 +1,121 @@
+body {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.navbar{
+    background: #0f2537;
+    .logo{
+        height: 50px;
+    }
+}
+#searchForm{
+    border-radius: 20px;
+    overflow: hidden;
+    #searchForm-term{
+        min-width: 300px;
+    }
+    button{
+        background-color: #3c948b;
+    }
+}
+.card-img-overlay{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 12%, rgba(0, 0, 0, 0.01) 30%);
+}
+
+.modal-content{
+    background-color: #0f2537;
+}
+
+.modal-header{
+    background-color: transparent;
+    border-bottom: none;
+    z-index: 10;
+}
+.show-container{
+    padding: 40px;
+    .current-show-info{
+        position: relative;
+        z-index: 10;
+        .subtitle{
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+            span:not(:last-child){
+                margin-right: 40px;
+            }
+        }
+        .show-summary{
+            font-size: 26px;
+            margin-top: 60px;
+        }
+    }
+    .show-img-wrapper{
+        position: fixed;
+        top: 0;
+        right: 10px;
+        height: 100%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .img-overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent, #0f2537);
+        }
+    }
+}
+
+.episodes-container{
+    position: relative;
+    padding: 40px;
+    z-index: 10;
+    div{
+        font-size: 20px;
+        padding: 4px;
+    }
+}
+
+.tv-svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+@media (min-width: 576px){
+    .container-sm, .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .show-container{
+        .current-show-info{
+            width: 100%;
+        }
+        .show-img-wrapper{
+            width: 70%;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .show-container{
+        .current-show-info{
+            width: 75%;
+        }
+        .show-img-wrapper{
+            width: 50%;
+        }
+    }
+}
