@@ -14,7 +14,7 @@ const defaultImg = "https://tinyurl.com/missing-tv";
 
 // Fetch shows
 async function getShowsByTerm(term) {
-  const response = await axios.get('http://api.tvmaze.com/search/shows', {params: {q: term}});
+  const response = await axios.get('https://api.tvmaze.com/search/shows', {params: {q: term}});
   
   return response.data;
 }
@@ -103,7 +103,7 @@ function populateEpisodes(episodes){
 
 // Fetch episodes
 async function getShowEpisodes(id) {
-  const response = await axios.get(`http://api.tvmaze.com/shows/${id}/episodes`);
+  const response = await axios.get(`https://api.tvmaze.com/shows/${id}/episodes`);
   
   return response.data.map(e => ({
     id: e.id,
